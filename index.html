@@ -56,7 +56,10 @@ h1 {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 15px 8px;
     border-radius: 10px;
     text-decoration: none;
@@ -64,6 +67,13 @@ h1 {
     font-size: 17px;
     font-weight: bold;
     color: white;
+}
+
+.button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 .whatsapp {
@@ -76,6 +86,10 @@ h1 {
 
 .facebook {
     background: #1877F2;
+}
+
+.youtube {
+    background: #FF0000;
 }
 
 .call {
@@ -149,6 +163,7 @@ h1 {
 }
 
 @media (max-width: 550px) {
+
     h1 {
         font-size: 23px;
     }
@@ -167,158 +182,108 @@ h1 {
 <body>
 
 <div class="container">
-```html
-<div class="buttons">
 
-    <a class="button whatsapp"
-       href="https://wa.me/919865065009"
-       target="_blank"
-       aria-label="WhatsApp"
-       style="display:flex;align-items:center;justify-content:center;gap:8px;">
-
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.5 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.4-8.3zM12 21.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4c-1-1.5-1.5-3.2-1.5-5C2 6.4 6.5 2 12 2s10 4.4 10 9.9-4.5 9.6-10 9.6z"/>
-        </svg>
-
-        WhatsApp
-    </a>
-
-
-    <a class="button instagram"
-       href="https://www.instagram.com/atoz3dprintingcbe/"
-       target="_blank"
-       aria-label="Instagram"
-       style="display:flex;align-items:center;justify-content:center;gap:8px;">
-
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-5.5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-        </svg>
-
-        Instagram
-    </a>
-
-
-    <a class="button facebook"
-       href="https://www.facebook.com/share/1EZ69c9X5i/"
-       target="_blank"
-       aria-label="Facebook"
-       style="display:flex;align-items:center;justify-content:center;gap:8px;">
-
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
-        </svg>
-
-        Facebook
-    </a>
-
-
-    <a class="button call"
-       href="tel:+919865065009"
-       aria-label="Call Now"
-       style="display:flex;align-items:center;justify-content:center;gap:8px;">
-
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M6.6 2h3l1.2 5-1.8 1.8a15.7 15.7 0 0 0 6.2 6.2l1.8-1.8 5 1.2v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 2.4 4c-.3-1.1.5-2 1.6-2h2.6z"/>
-        </svg>
-
-        Call Now
-    </a>
-
-
-    <a class="button email"
-       href="mailto:atozonlineservicescbe@gmail.com"
-       aria-label="Email"
-       style="display:flex;align-items:center;justify-content:center;gap:8px;">
-
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M2 5h20v14H2V5zm10 7.2L20 7V6.8H4V7l8 5.2zM4 17h16V9.4l-8 5.2-8-5.2V17z"/>
-        </svg>
-
-        Email
-    </a>
-
-</div>
-```
-    
     <div class="hero">
-    <img id="businessImage" alt="A to Z 3D Printing & Scanning Services">
 
-    <h1>A to Z 3D Printing & Scanning Services</h1>
+        <img
+            id="businessImage"
+            alt="A to Z 3D Printing & Scanning Services"
+        >
 
-    <div class="subtitle">
-        Coimbatore | Turning Ideas Into Reality
+        <h1>A to Z 3D Printing & Scanning Services</h1>
+
+        <div class="subtitle">
+            Coimbatore | Turning Ideas Into Reality
+        </div>
+
     </div>
-</div>
-
-<div class="buttons">
-
-    <a class="button whatsapp"
-       href="https://wa.me/919865065009"
-       target="_blank"
-       aria-label="WhatsApp">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.5 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.4-8.3z"/>
-        </svg>
-
-        WhatsApp
-    </a>
 
 
-    <a class="button instagram"
-       href="https://www.instagram.com/atoz3dprintingcbe/"
-       target="_blank"
-       aria-label="Instagram">
+    <div class="buttons">
 
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-5.5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-        </svg>
-
-        Instagram
-    </a>
-
-
-    <a class="button facebook"
-       href="https://www.facebook.com/share/1EZ69c9X5i/"
-       target="_blank"
-       aria-label="Facebook">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
-        </svg>
-
-        Facebook
-    </a>
+        <!-- WhatsApp -->
+        <a
+            class="button whatsapp"
+            href="https://wa.me/919865065009"
+            target="_blank"
+            aria-label="WhatsApp"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.5 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.4-8.3zM12 21.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4c-1-1.5-1.5-3.2-1.5-5C2 6.4 6.5 2 12 2s10 4.4 10 9.9-4.5 9.6-10 9.6z"/>
+            </svg>
+            WhatsApp
+        </a>
 
 
-    <a class="button youtube"
-       href="https://youtube.com/@atoz3dprintingservices"
-       target="_blank"
-       aria-label="YouTube">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.7V8.3l6.5 3.7-6.5 3.7z"/>
-        </svg>
-
-        YouTube
-    </a>
-
-
-    <a class="button call"
-       href="tel:+919865065009"
-       aria-label="Call Now">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6.6 2h3l1.2 5-1.8 1.8a15.7 15.7 0 0 0 6.2 6.2l1.8-1.8 5 1.2v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 2.4 4c-.3-1.1.5-2 1.6-2h2.6z"/>
-        </svg>
-
-        Call Now
-    </a>
+        <!-- Instagram -->
+        <a
+            class="button instagram"
+            href="https://www.instagram.com/atoz3dprintingcbe/"
+            target="_blank"
+            aria-label="Instagram"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-5.5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            Instagram
+        </a>
 
 
+        <!-- Facebook -->
+        <a
+            class="button facebook"
+            href="https://www.facebook.com/share/1EZ69c9X5i/"
+            target="_blank"
+            aria-label="Facebook"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
+            </svg>
+            Facebook
+        </a>
 
 
-</div>
+        <!-- YouTube -->
+        <a
+            class="button youtube"
+            href="https://youtube.com/@atoz3dprintingservices"
+            target="_blank"
+            aria-label="YouTube"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.7V8.3l6.5 3.7-6.5 3.7z"/>
+            </svg>
+            YouTube
+        </a>
+
+
+        <!-- Call -->
+        <a
+            class="button call"
+            href="tel:+919865065009"
+            aria-label="Call Now"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.6 2h3l1.2 5-1.8 1.8a15.7 15.7 0 0 0 6.2 6.2l1.8-1.8 5 1.2v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 2.4 4c-.3-1.1.5-2 1.6-2h2.6z"/>
+            </svg>
+            Call Now
+        </a>
+
+
+        <!-- Email -->
+        <a
+            class="button email"
+            href="mailto:atozonlineservicescbe@gmail.com"
+            aria-label="Email"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 5h20v14H2V5zm10 7.2L20 7V6.8H4V7l8 5.2zM4 17h16V9.4l-8 5.2-8-5.2V17z"/>
+            </svg>
+            Email
+        </a>
+
+    </div>
+
 
     <div class="section">
 
@@ -343,73 +308,61 @@ h1 {
 
     </div>
 
+
     <div class="section">
 
         <h2>Our Work</h2>
 
         <div class="video-box">
+
             <div class="video-note">
-                🎥 3D Printing & Scanning services 
+                🎥 3D Printing & Scanning Services
                 <br><br>
                 Contact us on WhatsApp to see our latest work.
             </div>
+
         </div>
 
     </div>
 
+
     <div class="contact">
 
-        <h2>Contact Us</h2>
+        <p><strong>A to Z 3D Printing & Scanning Services</strong></p>
 
-        <p>📱 98650 65009</p>
+        <p>Coimbatore</p>
+
+        <p>📞 +91 98650 65009</p>
 
         <p>✉️ atozonlineservicescbe@gmail.com</p>
 
-        <p>
-            📍 Nallampalayam, Ganapathy,<br>
-            Coimbatore - 641 006
-        </p>
-
-        <br>
-
-        <a class="button whatsapp"
-           href="https://wa.me/919865065009"
-           target="_blank">
-           💬 Chat With Us on WhatsApp
-        </a>
-
     </div>
 
+
     <div class="footer">
-        © A to Z 3D Printing & Scanning Services – Coimbatore
+
+        © 2026 A to Z 3D Printing & Scanning Services
+
     </div>
 
 </div>
 
+
 <script>
+/*
+   Keep your existing business photo.
+   The image is loaded from the same saved location
+   used by the previous page.
+*/
 
-const repoOwner = "atoz3Dprinting-web";
-const repoName = "website";
+const businessImage = document.getElementById("businessImage");
 
-fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/`)
-.then(response => response.json())
-.then(files => {
+const savedImage = localStorage.getItem("businessImage");
 
-    const imageFile = files.find(file =>
-        /\.(jpg|jpeg|png|webp)$/i.test(file.name)
-    );
-
-    if (imageFile) {
-        document.getElementById("businessImage").src =
-            imageFile.download_url;
-    }
-
-})
-.catch(error => {
-    console.log("Image loading error:", error);
-});
-
+if (savedImage) {
+    businessImage.src = savedImage;
+}
 </script>
 
 </body>
-      </html>
+    </html>
