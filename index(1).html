@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A to Z 3D Printing & Scanning Services – Coimbatore. 3D Printing, 3D Scanning, Reverse Engineering, Prototyping and Engineering Solutions.">
+<title>A to Z 3D Printing & Scanning Services – Coimbatore</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#edf4f7;
+    color:#173b52;
+    line-height:1.6;
+}
+a{text-decoration:none}
+.container{
+    max-width:1180px;
+    margin:auto;
+    background:#fff;
+    min-height:100vh;
+    box-shadow:0 0 30px rgba(16,66,90,.10);
+}
+
+/* HEADER */
+.header{
+    padding:22px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    background:#fff;
+    border-bottom:1px solid #dce8ed;
+}
+.company-name{
+    color:#073f69;
+    font-size:24px;
+    font-weight:800;
+    line-height:1.25;
+}
+.company-subtitle{
+    color:#128996;
+    margin-top:5px;
+    font-size:12px;
+    font-weight:700;
+}
+.header-right{
+    text-align:right;
+    color:#70838d;
+    font-size:11px;
+    line-height:1.6;
+}
+.header-right strong{color:#08627f}
+
+/* HERO */
+.hero{
+    padding:48px 34px;
+    display:flex;
+    align-items:center;
+    gap:28px;
+    min-height:390px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 84% 45%,rgba(51,213,205,.16),transparent 25%),
+      linear-gradient(135deg,#063b68,#075c82 52%,#087f8b);
+}
+.hero-content{flex:1;min-width:0}
+.hero-label{
+    color:#a9e5e1;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.8px;
+    margin-bottom:10px;
+}
+.hero h1{
+    color:#fff;
+    font-size:43px;
+    line-height:1.08;
+    margin-bottom:15px;
+}
+.hero h1 span{color:#8fe0db}
+.hero-description{
+    max-width:620px;
+    color:#e1f2f4;
+    font-size:14px;
+    line-height:1.75;
+}
+.hero-description strong{color:#fff}
+.hero-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:18px;
+}
+.hero-pills span{
+    padding:6px 10px;
+    border:1px solid rgba(235,255,255,.25);
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    color:#f3ffff;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* SMALL PRINTER VISUAL */
+.printer-display{
+    width:370px;
+    min-width:370px;
+    height:275px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.printer-platform{
+    position:absolute;
+    width:330px;
+    height:42px;
+    bottom:10px;
+    border-radius:50%;
+    background:radial-gradient(ellipse,rgba(75,220,214,.22),transparent 70%);
+}
+.printer{
+    position:relative;
+    width:285px;
+    height:225px;
+    border-radius:15px;
+    background:linear-gradient(145deg,#aab9c0,#6d8793 28%,#32627b 65%,#17475f);
+    border:5px solid #10364e;
+    box-shadow:0 22px 35px rgba(0,42,70,.35),inset 0 2px rgba(255,255,255,.25);
+}
+.printer-top{
+    position:absolute;left:15px;right:15px;top:10px;height:11px;border-radius:7px;
+    background:linear-gradient(90deg,#1b455a,#c1d0d4,#28708a);
+}
+.status-light{
+    position:absolute;right:12px;top:11px;width:7px;height:7px;border-radius:50%;
+    background:#42d4c9;box-shadow:0 0 7px rgba(66,212,201,.5);z-index:5;
+}
+.glass{
+    position:absolute;left:21px;right:21px;top:32px;bottom:37px;
+    border:2px solid #82a9b7;border-radius:7px;
+    background:linear-gradient(135deg,rgba(70,176,193,.15),rgba(5,38,55,.48));
+}
+.rail{
+    position:absolute;top:25px;left:34px;right:34px;height:6px;border-radius:5px;
+    background:linear-gradient(90deg,#1c4357,#c4d0d4,#27667e);z-index:4;
+}
+.print-head{
+    position:absolute;top:29px;left:118px;width:48px;height:59px;z-index:6;
+    animation:printerMove 3.5s infinite ease-in-out;
+}
+.head-top{width:48px;height:8px;background:#12364b;border-radius:4px}
+.head-body{
+    width:48px;height:31px;background:linear-gradient(145deg,#70909d,#254d63);
+    border:2px solid #a8c0c8;border-radius:4px;
+}
+.nozzle{
+    width:14px;height:23px;margin:auto;position:relative;
+    background:linear-gradient(90deg,#61767f,#d0d9dc,#526871);
+}
+.nozzle-tip{
+    position:absolute;width:6px;height:6px;left:4px;bottom:-4px;border-radius:50%;
+    background:#45c9c0;box-shadow:0 0 6px rgba(69,201,192,.55);
+}
+.print-object{
+    position:absolute;left:79px;bottom:42px;width:120px;height:82px;
+    border:2px solid #16445c;border-radius:4px;
+    background:repeating-linear-gradient(0deg,#1c7894 0,#1c7894 5px,#35a0ad 6px,#35a0ad 8px);
+    transform-origin:bottom;
+    animation:printBuild 3.5s infinite ease-in-out;
+}
+.print-bed{
+    position:absolute;left:30px;right:30px;bottom:27px;height:8px;border-radius:5px;
+    background:linear-gradient(90deg,#355766,#c1cdd1,#397388);
+}
+.printer-accent{
+    position:absolute;right:0;top:35px;bottom:38px;width:4px;border-radius:4px;
+    background:linear-gradient(#42c8c0,#197e91,#42c8c0);
+}
+@keyframes printerMove{0%,100%{transform:translateX(-48px)}50%{transform:translateX(48px)}}
+@keyframes printBuild{0%{transform:scaleY(.12)}35%{transform:scaleY(.38)}65%{transform:scaleY(.72)}100%{transform:scaleY(1)}}
+
+/* SOCIAL */
+.social-section{
+    padding:20px 18px 22px;
+    background:#fff;
+    border-bottom:1px solid #dce8ed;
+    text-align:center;
+}
+.social-title{
+    color:#0b4d70;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.4px;
+    margin-bottom:13px;
+}
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:9px;
+}
+.social{
+    width:105px;
+    min-height:64px;
+    padding:8px 6px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    border-radius:10px;
+    color:#fff;
+    font-size:10px;
+    font-weight:800;
+    box-shadow:0 4px 11px rgba(0,0,0,.11);
+    transition:.2s ease;
+}
+.social:hover{transform:translateY(-3px);box-shadow:0 8px 16px rgba(0,0,0,.16)}
+.social svg{width:24px;height:24px;display:block;flex:0 0 auto}
+.social span{display:block!important;color:#fff!important;line-height:1.1}
+.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.youtube{background:#e62117}
+.whatsapp{background:#20bd5a}
+.facebook{background:#1877f2}
+.call{background:#13864e}
+.email{background:#126f9e}
+
+/* INTRO */
+.intro{padding:42px 25px 25px;text-align:center}
+.intro h2{color:#0b4d70;font-size:28px;margin-bottom:8px}
+.intro-line{width:52px;height:3px;background:#19a5a3;margin:0 auto 13px}
+.intro p{max-width:800px;margin:auto;color:#6b7d87;font-size:13px;line-height:1.8}
+
+/* SERVICES */
+.services{padding:22px 30px 48px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service-card{
+    position:relative;padding:19px 17px;border:1px solid #dce7eb;border-radius:11px;
+    background:#fff;transition:.2s ease;overflow:hidden;
+}
+.service-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#168da1}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(10,80,110,.09)}
+.service-icon{
+    width:42px;height:42px;display:flex;align-items:center;justify-content:center;
+    border-radius:10px;background:#eaf6f7;font-size:20px;margin-bottom:11px;
+}
+.service-card h3{color:#124d6d;font-size:16px;margin-bottom:6px}
+.service-card p{color:#6c7c85;font-size:12px;line-height:1.6}
+
+/* SECTIONS */
+.process{padding:45px 30px;background:#f2f8fa}
+.section-heading{text-align:center;color:#0b4d70;font-size:27px;margin-bottom:7px}
+.section-subtitle{text-align:center;color:#71818a;font-size:12px;margin-bottom:24px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.process-card{padding:20px 13px;background:#fff;border:1px solid #d9e7eb;border-radius:10px;text-align:center}
+.step-number{
+    width:34px;height:34px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center;
+    border-radius:50%;background:#087d96;color:#fff;font-weight:800;font-size:13px;
+}
+.process-card h4{color:#174e6c;font-size:13px;margin-bottom:5px}
+.process-card p{color:#74828b;font-size:11px;line-height:1.5}
+
+.applications{padding:45px 28px;text-align:center}
+.application-list{
+    max-width:980px;margin:22px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px
+}
+.application-list span{
+    padding:8px 13px;background:#eaf5f7;border:1px solid #d2e7eb;border-radius:20px;
+    color:#174d69;font-size:11px;font-weight:700
+}
+
+.why-us{padding:45px 28px;background:#fff;border-top:1px solid #e1e9ec}
+.why-grid{max-width:950px;margin:22px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.why-card{text-align:center;padding:18px 13px}
+.why-icon{font-size:25px;margin-bottom:7px}
+.why-card h3{color:#154b69;font-size:14px;margin-bottom:5px}
+.why-card p{color:#71818a;font-size:11px;line-height:1.55}
+
+.contact{
+    padding:45px 20px;text-align:center;
+    background:linear-gradient(135deg,#07547b,#087f8b);color:#fff
+}
+.contact h2{font-size:28px;margin-bottom:8px}
+.contact p{color:#e0f2f4;font-size:13px;margin:5px}
+.contact a{color:#fff;font-weight:800}
+.address{margin-top:14px;color:#fff;font-size:14px;font-weight:800}
+.footer{
+    padding:19px 15px;text-align:center;background:#06324c;color:#91b1bd;font-size:10px;line-height:1.7
+}
+.footer strong{color:#fff;font-size:12px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{padding:40px 25px}
+    .printer-display{width:320px;min-width:320px;transform:scale(.88)}
+    .service-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+    .header{display:block;text-align:center;padding:18px 14px}
+    .company-name{font-size:19px}
+    .header-right{text-align:center;margin-top:7px}
+    .hero{display:block;text-align:center;padding:36px 17px 28px;min-height:auto}
+    .hero-label{font-size:10px}
+    .hero h1{font-size:31px}
+    .hero-description{margin:auto;font-size:13px}
+    .hero-pills{justify-content:center}
+    .printer-display{
+        width:100%;min-width:0;height:220px;
+        transform:scale(.72);
+        margin:-4px auto -35px;
+    }
+    .social-section{padding:17px 10px 19px}
+    .social-buttons{gap:7px}
+    .social{width:88px;min-height:58px;padding:7px 4px;font-size:9px}
+    .social svg{width:21px;height:21px}
+    .services,.process,.why-us{padding-left:15px;padding-right:15px}
+    .service-grid{grid-template-columns:1fr}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px){
+    .social{width:82px;min-height:56px}
+    .social-buttons{gap:6px}
+    .process-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header class="header">
+    <div>
+        <div class="company-name">A to Z 3D Printing &amp; Scanning Services – Coimbatore</div>
+        <div class="company-subtitle">Professional 3D Printing • 3D Scanning • Engineering Solutions</div>
+    </div>
+    <div class="header-right">
+        <strong>From Concept to Component</strong><br>
+        3D Manufacturing &amp; Engineering
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-label">3D MANUFACTURING &amp; ENGINEERING</div>
+        <h1>Turn Your <span>Ideas</span><br>Into Reality</h1>
+        <p class="hero-description">
+            Professional solutions for
+            <strong>3D Printing, Multi-Color Printing, 3D Scanning, Reverse Engineering,
+            Miniature Design, Building &amp; Architectural Models, Prototype Development,
+            Small Batch Production and Engineering Components.</strong>
+        </p>
+        <div class="hero-pills">
+            <span>3D Printing</span>
+            <span>Multi-Color Printing</span>
+            <span>3D Scanning</span>
+            <span>Reverse Engineering</span>
+            <span>Miniature Design</span>
+            <span>Building Models</span>
+            <span>Engineering Parts</span>
+        </div>
+    </div>
+
+    <div class="printer-display" aria-hidden="true">
+        <div class="printer-platform"></div>
+        <div class="printer">
+            <div class="printer-top"></div>
+            <div class="status-light"></div>
+            <div class="rail"></div>
+            <div class="glass"></div>
+            <div class="printer-accent"></div>
+            <div class="print-head">
+                <div class="head-top"></div>
+                <div class="head-body"></div>
+                <div class="nozzle"><div class="nozzle-tip"></div></div>
+            </div>
+            <div class="print-object"></div>
+            <div class="print-bed"></div>
+        </div>
+    </div>
+</section>
+
+<section class="social-section">
+    <div class="social-title">CONNECT WITH US</div>
+    <div class="social-buttons">
+
+        <a class="social instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="white" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+            </svg>
+            <span>Instagram</span>
+        </a>
+
+        <a class="social youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 1.9 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8Z" fill="white"/>
+                <path d="M10 9l5 3-5 3V9Z" fill="#e62117"/>
+            </svg>
+            <span>YouTube</span>
+        </a>
+
+        <a class="social whatsapp" href="https://wa.me/919865065009" target="_blank" rel="noopener" aria-label="WhatsApp 9865065009">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.2 21.8l5.2-1.4A9.8 9.8 0 1 0 12 2.2Z" fill="white"/>
+                <path d="M16.5 13.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.7.1-.2 0-.4 0-.5-.1-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.8.8-1 2-.2 3.2 1.1 1.8 2.4 3.2 4.4 4.1 2.4 1.1 2.4.7 2.8.7.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3Z" fill="#20bd5a"/>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+
+        <a class="social facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3.5l.5-4H13V9c0-.7.3-1 1-1Z" fill="white"/>
+            </svg>
+            <span>Facebook</span>
+        </a>
+
+        <a class="social call" href="tel:+919865065009" aria-label="Call 9865065009">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.6 2.8 9 2.2c.6-.2 1.2.1 1.4.7l1.1 3.1c.2.5 0 .9-.4 1.3L9.7 8.8c1 2.1 2.7 3.8 4.8 4.8l1.5-1.4c.4-.4.9-.5 1.3-.3l3.1 1.1c.6.2.9.8.7 1.4l-.6 2.4c-.2.8-1 1.4-1.8 1.4C10.8 18.2 5.8 13.2 5.8 5.2c0-.8.6-1.6 1.4-1.8Z" fill="white"/>
+            </svg>
+            <span>Call Us</span>
+        </a>
+
+        <a class="social email" href="mailto:atozonlineservicescbe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="white" stroke-width="2"/>
+                <path d="m4 7 8 6 8-6" fill="none" stroke="white" stroke-width="2"/>
+            </svg>
+            <span>Email</span>
+        </a>
+
+    </div>
+</section>
+
+<section class="intro">
+    <h2>3D Printing &amp; Scanning Services in Coimbatore</h2>
+    <div class="intro-line"></div>
+    <p>
+        We provide practical 3D manufacturing and engineering support for industries,
+        engineering companies, colleges, schools and product developers — from an idea,
+        drawing or existing component to a usable 3D printed or engineered part.
+    </p>
+</section>
+
+<section class="services">
+    <div class="service-grid">
+        <div class="service-card"><div class="service-icon">🖨️</div><h3>3D Printing</h3><p>High-quality prototypes, functional parts, custom components and production-ready 3D printed parts.</p></div>
+        <div class="service-card"><div class="service-icon">🎨</div><h3>Multi-Color Printing</h3><p>Multi-color and detailed prints for presentation models, creative products, miniatures and visual prototypes.</p></div>
+        <div class="service-card"><div class="service-icon">📡</div><h3>3D Scanning</h3><p>Capture existing components and objects for inspection, redesign and digital engineering workflows.</p></div>
+        <div class="service-card"><div class="service-icon">🔄</div><h3>Reverse Engineering</h3><p>Convert physical parts into digital references and engineering models for reproduction or improvement.</p></div>
+        <div class="service-card"><div class="service-icon">🧩</div><h3>Prototype Development</h3><p>Rapid prototyping for product development, concept validation, fit checks and functional testing.</p></div>
+        <div class="service-card"><div class="service-icon">⚙️</div><h3>Engineering Components</h3><p>Custom brackets, housings, covers, fixtures, replacement parts, jigs and engineering components.</p></div>
+        <div class="service-card"><div class="service-icon">🔧</div><h3>Spare Parts &amp; Enclosures</h3><p>Custom electronics enclosures, replacement parts and application-specific components.</p></div>
+        <div class="service-card"><div class="service-icon">🏠</div><h3>Building &amp; Architectural Models</h3><p>Detailed scale models for buildings, architecture, presentations and project demonstrations.</p></div>
+        <div class="service-card"><div class="service-icon">🎭</div><h3>Miniature Design</h3><p>Custom miniature models, display pieces, scale models and detailed objects.</p></div>
+        <div class="service-card"><div class="service-icon">🏭</div><h3>Small Batch Production</h3><p>Low-volume production of custom parts without traditional tooling for every application.</p></div>
+        <div class="service-card"><div class="service-icon">🎓</div><h3>College &amp; School Projects</h3><p>3D printed models, engineering project components and educational project-support parts.</p></div>
+        <div class="service-card"><div class="service-icon">🎁</div><h3>Corporate Gifts</h3><p>Customized 3D printed models, awards, desk pieces and special-purpose corporate gifts.</p></div>
+    </div>
+</section>
+
+<section class="process">
+    <h2 class="section-heading">Our Process</h2>
+    <p class="section-subtitle">Simple workflow from your requirement to the finished component.</p>
+    <div class="process-grid">
+        <div class="process-card"><div class="step-number">1</div><h4>Requirement</h4><p>Share your idea, drawing, dimensions, reference photo or existing component.</p></div>
+        <div class="process-card"><div class="step-number">2</div><h4>Design / Scan</h4><p>We prepare, scan, model or reverse-engineer the required geometry.</p></div>
+        <div class="process-card"><div class="step-number">3</div><h4>Print / Produce</h4><p>The approved design is printed or prepared for the required application.</p></div>
+        <div class="process-card"><div class="step-number">4</div><h4>Delivery</h4><p>Quality-checked parts are prepared and delivered according to the requirement.</p></div>
+    </div>
+</section>
+
+<section class="applications">
+    <h2 class="section-heading">Who We Serve</h2>
+    <p class="section-subtitle">Solutions for engineering, education, product development and creative applications.</p>
+    <div class="application-list">
+        <span>Engineering Industries</span><span>Manufacturing Companies</span><span>Injection Molding Companies</span>
+        <span>Product Developers</span><span>Colleges</span><span>Schools</span><span>Students</span>
+        <span>Architects</span><span>Designers</span><span>Small Businesses</span><span>Corporate Projects</span><span>Custom Projects</span>
+    </div>
+</section>
+
+<section class="why-us">
+    <h2 class="section-heading">Why Choose A to Z?</h2>
+    <p class="section-subtitle">Engineering-focused service with practical solutions.</p>
+    <div class="why-grid">
+        <div class="why-card"><div class="why-icon">🎯</div><h3>Requirement Focused</h3><p>Solutions planned around the actual application, dimensions and intended use.</p></div>
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Rapid Prototyping</h3><p>Turn concepts into physical prototypes quickly for testing and development.</p></div>
+        <div class="why-card"><div class="why-icon">🛠️</div><h3>Engineering Approach</h3><p>Practical support for components, enclosures, spare parts, prototypes and models.</p></div>
+        <div class="why-card"><div class="why-icon">📐</div><h3>Design &amp; Scan Support</h3><p>Combine scanning, modelling and reverse engineering where required.</p></div>
+        <div class="why-card"><div class="why-icon">🏭</div><h3>Small Batch Friendly</h3><p>Suitable for one-off parts, prototypes and low-volume custom production.</p></div>
+        <div class="why-card"><div class="why-icon">🤝</div><h3>Personal Service</h3><p>Direct communication from requirement through design, production and delivery.</p></div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Let’s Build Your Idea</h2>
+    <p>Have a drawing, photo, broken part, prototype or project requirement?</p>
+    <p>Contact A to Z 3D Printing &amp; Scanning Services – Coimbatore.</p>
+    <p><a href="tel:+919865065009">+91 98650 65009</a></p>
+    <p><a href="https://wa.me/919865065009" target="_blank" rel="noopener">WhatsApp: +91 98650 65009</a></p>
+    <p><a href="mailto:atozonlineservicescbe@gmail.com">atozonlineservicescbe@gmail.com</a></p>
+    <div class="address">Coimbatore, Tamil Nadu</div>
+</section>
+
+<footer class="footer">
+    <strong>A to Z 3D Printing &amp; Scanning Services – Coimbatore</strong><br>
+    3D Printing • 3D Scanning • Reverse Engineering • Prototyping • Engineering Solutions<br>
+    © 2026 A to Z 3D Printing &amp; Scanning Services. All Rights Reserved.
+</footer>
+
+</div>
+</body>
+</html>
