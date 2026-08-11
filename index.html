@@ -8,9 +8,9 @@
 
 <style>
 
-/* =========================================================
-   GLOBAL
-========================================================= */
+/* =====================================================
+   PREMIUM ROYAL BLUE + TEAL CORPORATE THEME
+===================================================== */
 
 *{
     margin:0;
@@ -24,135 +24,113 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#e9eef3;
-    color:#172633;
+    background:#edf3f7;
+    color:#18344a;
 }
 
 .container{
     max-width:1200px;
     margin:auto;
-    background:#fff;
+    background:#ffffff;
     min-height:100vh;
-    box-shadow:0 0 40px rgba(0,0,0,.08);
+    box-shadow:0 0 35px rgba(20,65,90,.10);
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 .header{
-    padding:24px 34px;
     background:#ffffff;
-    border-bottom:1px solid #dce5eb;
+    padding:25px 35px;
+    border-bottom:1px solid #dce9ee;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .company-name{
-    color:#072d49;
+    color:#083d68;
     font-size:25px;
     font-weight:800;
     line-height:1.25;
 }
 
 .company-subtitle{
-    margin-top:6px;
-    color:#137db8;
+    color:#168a98;
+    margin-top:7px;
     font-size:13px;
     font-weight:700;
-    letter-spacing:.3px;
 }
 
 .header-right{
     text-align:right;
-    color:#687984;
+    color:#6b818d;
     font-size:12px;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .header-right strong{
-    color:#086796;
+    color:#0b6686;
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero{
-    position:relative;
-    min-height:470px;
-    padding:65px 38px;
-
+    min-height:490px;
+    padding:60px 38px;
     display:flex;
     align-items:center;
-    gap:30px;
-
+    gap:20px;
     overflow:hidden;
+    position:relative;
 
     background:
-        radial-gradient(
-            circle at 82% 50%,
-            rgba(30,183,246,.25),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 15% 15%,
-            rgba(24,105,180,.18),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #041722 0%,
-            #082e49 48%,
-            #063d61 100%
-        );
-}
-
-.hero:after{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    right:-180px;
-    top:-180px;
-    border-radius:50%;
-    border:1px solid rgba(80,205,255,.15);
-    box-shadow:
-        0 0 0 35px rgba(80,205,255,.03),
-        0 0 0 70px rgba(80,205,255,.025);
+    radial-gradient(
+        circle at 82% 48%,
+        rgba(34,184,190,.16),
+        transparent 28%
+    ),
+    linear-gradient(
+        135deg,
+        #073b68 0%,
+        #075782 48%,
+        #087f8b 100%
+    );
 }
 
 .hero-content{
+    flex:1;
     position:relative;
     z-index:3;
-    flex:1;
 }
 
 .hero-label{
-    color:#55d0ff;
-    font-size:13px;
+    color:#a9e1e0;
+    font-size:12px;
     font-weight:800;
     letter-spacing:2px;
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
 .hero h1{
     color:#ffffff;
     font-size:47px;
     line-height:1.08;
-    margin-bottom:19px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#55d0ff;
+    color:#8fe0dc;
 }
 
 .hero-description{
     max-width:650px;
-    color:#d7e9f2;
+    color:#e0f0f3;
     font-size:15px;
     line-height:1.8;
 }
@@ -165,148 +143,145 @@ body{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-top:24px;
+    margin-top:25px;
 }
 
 .hero-pills span{
     padding:9px 13px;
+    border:1px solid rgba(220,255,255,.25);
     border-radius:20px;
-
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(120,220,255,.20);
-
-    color:#eaf9ff;
+    background:rgba(255,255,255,.08);
+    color:#f0fbfc;
     font-size:12px;
     font-weight:600;
-
-    backdrop-filter:blur(5px);
 }
 
 
-/* =========================================================
-   GRAND 3D PRINTER DISPLAY
-========================================================= */
+/* =====================================================
+   GRAND 3D PRINTER
+===================================================== */
 
 .printer-display{
+    width:500px;
+    min-width:500px;
+    height:390px;
     position:relative;
-    width:510px;
-    min-width:510px;
-    height:380px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
-    z-index:2;
 }
-
-/* glowing platform */
 
 .printer-platform{
     position:absolute;
-    width:430px;
+    width:420px;
     height:65px;
-    bottom:32px;
-
+    bottom:24px;
     border-radius:50%;
 
     background:
-        radial-gradient(
-            ellipse,
-            rgba(50,205,255,.35),
-            rgba(20,100,150,.12),
-            transparent 70%
-        );
-
-    filter:blur(2px);
+    radial-gradient(
+        ellipse,
+        rgba(75,220,214,.25),
+        rgba(22,91,116,.12),
+        transparent 70%
+    );
 }
 
-/* printer outer body */
+
+/* MAIN PRINTER */
 
 .printer{
     position:relative;
-
-    width:375px;
-    height:305px;
-
+    width:370px;
+    height:300px;
     border-radius:18px;
 
     background:
-        linear-gradient(
-            145deg,
-            #8c9aa3 0%,
-            #59666f 27%,
-            #303c44 65%,
-            #18242c 100%
-        );
+    linear-gradient(
+        145deg,
+        #a9b8bf 0%,
+        #6f8793 25%,
+        #32617a 62%,
+        #17475f 100%
+    );
 
-    border:6px solid #111b21;
+    border:6px solid #10364e;
 
     box-shadow:
-        0 35px 65px rgba(0,0,0,.48),
-        0 0 35px rgba(35,190,240,.15),
-        inset 0 2px 0 rgba(255,255,255,.32),
-        inset 0 -20px 35px rgba(0,0,0,.30);
+        0 30px 55px rgba(0,42,70,.38),
+        inset 0 2px 0 rgba(255,255,255,.30),
+        inset 0 -18px 30px rgba(0,32,48,.20);
 }
 
-/* top metallic panel */
+
+/* TOP PANEL */
 
 .printer-top{
     position:absolute;
     left:18px;
     right:18px;
     top:12px;
-    height:15px;
-
+    height:14px;
     border-radius:8px;
 
     background:
-        linear-gradient(
-            90deg,
-            #28343b,
-            #b7c1c6,
-            #39464e
-        );
-
-    opacity:.8;
+    linear-gradient(
+        90deg,
+        #1b455a,
+        #c1d0d4,
+        #28708a
+    );
 }
 
 
-/* front glass chamber */
+/* STATUS */
+
+.status-light{
+    position:absolute;
+    right:15px;
+    top:13px;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#42d4c9;
+    box-shadow:0 0 7px rgba(66,212,201,.50);
+    z-index:10;
+}
+
+
+/* GLASS */
 
 .glass{
     position:absolute;
-
     left:27px;
     right:27px;
-    top:43px;
-    bottom:50px;
+    top:42px;
+    bottom:49px;
 
+    border:3px solid #82a9b7;
     border-radius:8px;
 
-    border:3px solid #71838d;
-
     background:
-        linear-gradient(
-            135deg,
-            rgba(104,206,244,.20),
-            rgba(7,25,35,.56)
-        );
+    linear-gradient(
+        135deg,
+        rgba(70,176,193,.16),
+        rgba(5,38,55,.50)
+    );
 
     box-shadow:
-        inset 0 0 30px rgba(60,200,245,.12),
-        0 0 12px rgba(0,0,0,.35);
+    inset 0 0 25px rgba(75,200,210,.08);
 }
 
-/* glass reflection */
+
+/* GLASS REFLECTION */
 
 .glass:after{
     content:"";
     position:absolute;
     left:12px;
     top:8px;
-    width:35%;
-    height:80%;
+    width:30%;
+    height:78%;
 
     background:linear-gradient(
         100deg,
@@ -318,254 +293,193 @@ body{
 }
 
 
-/* =========================================================
-   PRINTER INTERNAL RAIL
-========================================================= */
+/* RAIL */
 
 .rail{
     position:absolute;
-
     top:32px;
-    left:42px;
-    right:42px;
-
+    left:43px;
+    right:43px;
     height:8px;
-
     border-radius:6px;
 
     background:
-        linear-gradient(
-            90deg,
-            #202b31,
-            #c3ccd0,
-            #202b31
-        );
+    linear-gradient(
+        90deg,
+        #1c4357,
+        #c4d0d4,
+        #27667e
+    );
 
-    z-index:5;
-
-    box-shadow:
-        0 2px 4px rgba(0,0,0,.5);
+    z-index:6;
 }
 
 
-/* =========================================================
-   PRINT HEAD
-========================================================= */
+/* PRINT HEAD */
 
 .print-head{
     position:absolute;
-
     top:37px;
-    left:155px;
-
+    left:154px;
     width:62px;
     height:76px;
-
     z-index:8;
 
     animation:
-        printerHeadMove 3.2s
-        infinite
-        ease-in-out;
+    printerMove 3.5s
+    infinite
+    ease-in-out;
 }
 
 .head-top{
     width:62px;
-    height:11px;
-
+    height:10px;
+    background:#12364b;
     border-radius:5px 5px 2px 2px;
-
-    background:#11181d;
 }
 
 .head-body{
     width:62px;
-    height:38px;
+    height:39px;
 
     background:
-        linear-gradient(
-            145deg,
-            #2c373d,
-            #090d10
-        );
+    linear-gradient(
+        145deg,
+        #70909d,
+        #254d63
+    );
 
-    border:2px solid #7d8b92;
-
+    border:2px solid #a8c0c8;
     border-radius:4px;
 }
 
 .nozzle{
     width:18px;
-    height:31px;
-
+    height:30px;
     margin:auto;
 
     background:
-        linear-gradient(
-            90deg,
-            #5e6b72,
-            #c0c9cd,
-            #4b575d
-        );
+    linear-gradient(
+        90deg,
+        #61767f,
+        #d0d9dc,
+        #526871
+    );
 
     position:relative;
 }
 
 .nozzle-tip{
     position:absolute;
-
-    width:9px;
-    height:9px;
-
-    left:4px;
-    bottom:-6px;
-
+    width:8px;
+    height:8px;
+    left:5px;
+    bottom:-5px;
     border-radius:50%;
 
-    background:#2bd1ff;
+    background:#45c9c0;
 
     box-shadow:
-        0 0 8px #2bd1ff,
-        0 0 18px rgba(43,209,255,.8);
+    0 0 7px rgba(69,201,192,.55);
 }
 
 
-/* =========================================================
-   PRINTED OBJECT
-========================================================= */
+/* PRINTED OBJECT */
 
 .print-object{
     position:absolute;
+    left:102px;
+    bottom:55px;
+    width:150px;
+    height:105px;
 
-    left:98px;
-    bottom:56px;
-
-    width:155px;
-    height:108px;
-
+    border:3px solid #16445c;
     border-radius:4px;
 
-    border:3px solid #10191e;
-
     background:
-        repeating-linear-gradient(
-            0deg,
-            #1176a7 0px,
-            #1176a7 6px,
-            #1bb8e9 7px,
-            #1bb8e9 9px
-        );
+    repeating-linear-gradient(
+        0deg,
+        #1c7894 0px,
+        #1c7894 6px,
+        #35a0ad 7px,
+        #35a0ad 9px
+    );
 
     box-shadow:
-        0 0 15px rgba(25,190,240,.28);
+    0 0 12px rgba(47,177,183,.18);
 
     transform-origin:bottom;
 
     animation:
-        objectBuild 3.2s
-        infinite
-        ease-in-out;
+    printBuild 3.5s
+    infinite
+    ease-in-out;
 }
 
 
-/* print bed */
+/* PRINT BED */
 
 .print-bed{
     position:absolute;
-
     left:40px;
     right:40px;
     bottom:35px;
-
     height:10px;
-
     border-radius:6px;
 
     background:
-        linear-gradient(
-            90deg,
-            #303d44,
-            #9ca9af,
-            #303d44
-        );
-
-    box-shadow:
-        0 3px 5px rgba(0,0,0,.5);
+    linear-gradient(
+        90deg,
+        #355766,
+        #c1cdd1,
+        #397388
+    );
 }
 
 
-/* printer status light */
-
-.status-light{
-    position:absolute;
-
-    right:15px;
-    top:13px;
-
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:#39d7ff;
-
-    box-shadow:
-        0 0 8px #39d7ff,
-        0 0 18px rgba(57,215,255,.8);
-
-    z-index:10;
-}
-
-
-/* side accent */
+/* SIDE ACCENT */
 
 .printer-accent{
     position:absolute;
-
     right:0;
     top:45px;
     bottom:50px;
-
     width:5px;
-
     border-radius:4px;
 
     background:
-        linear-gradient(
-            #27c8ff,
-            #116ea0,
-            #27c8ff
-        );
-
-    box-shadow:
-        0 0 12px rgba(39,200,255,.5);
+    linear-gradient(
+        #42c8c0,
+        #197e91,
+        #42c8c0
+    );
 }
 
 
-@keyframes printerHeadMove{
+@keyframes printerMove{
 
     0%,100%{
-        transform:translateX(-72px);
+        transform:translateX(-70px);
     }
 
     50%{
-        transform:translateX(72px);
+        transform:translateX(70px);
     }
 
 }
 
-@keyframes objectBuild{
+@keyframes printBuild{
 
     0%{
         transform:scaleY(.08);
     }
 
-    40%{
-        transform:scaleY(.48);
+    35%{
+        transform:scaleY(.35);
     }
 
-    70%{
-        transform:scaleY(.78);
+    65%{
+        transform:scaleY(.72);
     }
 
     100%{
@@ -575,238 +489,196 @@ body{
 }
 
 
-/* =========================================================
+/* =====================================================
    SOCIAL MEDIA
-========================================================= */
+===================================================== */
 
 .social-section{
+    padding:30px 20px;
     background:#ffffff;
-
-    padding:28px 20px;
-
-    border-bottom:1px solid #dfe7ec;
-
     text-align:center;
+    border-bottom:1px solid #dfe9ed;
 }
 
 .social-title{
-    color:#092f4b;
-
+    color:#0b4d70;
     font-size:14px;
     font-weight:800;
-
     letter-spacing:1px;
-
     margin-bottom:18px;
 }
 
 .social-buttons{
     display:flex;
     justify-content:center;
-    align-items:center;
     flex-wrap:wrap;
-
     gap:13px;
 }
 
 .social{
-    min-width:150px;
+    min-width:155px;
     height:60px;
-
     padding:0 18px;
-
-    border-radius:11px;
 
     display:flex;
     align-items:center;
     justify-content:center;
-
     gap:10px;
 
+    border-radius:11px;
     text-decoration:none;
 
-    color:white;
-
+    color:#ffffff;
     font-size:14px;
     font-weight:800;
 
-    box-shadow:
-        0 6px 16px rgba(0,0,0,.13);
+    box-shadow:0 6px 16px rgba(0,0,0,.13);
 
     transition:.25s ease;
 }
 
 .social:hover{
     transform:translateY(-4px);
-
-    box-shadow:
-        0 12px 25px rgba(0,0,0,.20);
+    box-shadow:0 12px 24px rgba(0,0,0,.20);
 }
 
-.social-icon{
-    width:30px;
-    height:30px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:22px;
-    font-weight:900;
+.social svg{
+    width:29px;
+    height:29px;
+    fill:currentColor;
 }
 
-/* Instagram */
+
+/* INSTAGRAM */
 
 .instagram{
     background:
-        linear-gradient(
-            135deg,
-            #833ab4 0%,
-            #fd1d1d 50%,
-            #fcb045 100%
-        );
+    linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
 }
 
-/* YouTube */
+
+/* YOUTUBE */
 
 .youtube{
     background:#ff0000;
 }
 
-/* WhatsApp */
+
+/* WHATSAPP */
 
 .whatsapp{
     background:#25d366;
 }
 
-/* Facebook */
+
+/* FACEBOOK */
 
 .facebook{
     background:#1877f2;
 }
 
-/* Call */
+
+/* CALL */
 
 .call{
-    background:#0b8f55;
+    background:#16834d;
 }
 
-/* Email */
+
+/* EMAIL */
 
 .email{
-    background:#1478b5;
+    background:#176f9f;
 }
 
 
-/* =========================================================
+/* =====================================================
    INTRO
-========================================================= */
+===================================================== */
 
 .intro{
+    padding:50px 25px 30px;
     text-align:center;
-
-    padding:50px 25px 28px;
 }
 
 .intro h2{
-    color:#092f4b;
-
+    color:#0b4d70;
     font-size:30px;
-
     margin-bottom:10px;
 }
 
 .intro-line{
     width:58px;
     height:3px;
-
-    background:#1684bd;
-
+    background:#19a5a3;
     margin:0 auto 15px;
-
-    border-radius:5px;
 }
 
 .intro p{
     max-width:780px;
-
     margin:auto;
-
-    color:#687983;
-
+    color:#6c7d86;
     font-size:14px;
-
-    line-height:1.75;
+    line-height:1.8;
 }
 
 
-/* =========================================================
+/* =====================================================
    SERVICES
-========================================================= */
+===================================================== */
 
 .services{
-    padding:25px 32px 58px;
+    padding:25px 32px 55px;
 }
 
 .service-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .service-card{
     position:relative;
+    padding:23px 20px;
+
+    border:1px solid #dce7eb;
+    border-radius:11px;
 
     background:#ffffff;
 
-    border:1px solid #dce5ea;
-
-    border-radius:11px;
-
-    padding:23px 20px;
-
-    overflow:hidden;
-
-    transition:.25s;
+    transition:.25s ease;
 }
 
 .service-card:before{
     content:"";
-
     position:absolute;
-
     left:0;
     top:0;
     bottom:0;
-
     width:3px;
-
-    background:#1684bd;
+    background:#168da1;
 }
 
 .service-card:hover{
-    transform:translateY(-5px);
-
-    border-color:#65b3dc;
-
-    box-shadow:
-        0 12px 28px rgba(20,55,75,.10);
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(10,80,110,.10);
 }
 
 .service-icon{
     width:47px;
     height:47px;
-
-    border-radius:10px;
-
-    background:#eaf6fc;
-
     display:flex;
     align-items:center;
     justify-content:center;
+
+    border-radius:10px;
+
+    background:#eaf6f7;
 
     font-size:22px;
 
@@ -814,283 +686,227 @@ body{
 }
 
 .service-card h3{
-    color:#123d59;
-
+    color:#124d6d;
     font-size:17px;
-
     margin-bottom:8px;
 }
 
 .service-card p{
-    color:#697a84;
-
+    color:#6c7c85;
     font-size:13px;
-
     line-height:1.65;
 }
 
 
-/* =========================================================
+/* =====================================================
    PROCESS
-========================================================= */
+===================================================== */
 
 .process{
-    background:#f4f7f9;
-
     padding:52px 32px;
+    background:#f2f8fa;
 }
 
 .section-heading{
     text-align:center;
-
-    color:#092f4b;
-
+    color:#0b4d70;
     font-size:28px;
-
     margin-bottom:10px;
 }
 
 .section-subtitle{
     text-align:center;
-
     color:#71818a;
-
     font-size:13px;
-
     margin-bottom:28px;
 }
 
 .process-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
 
 .process-card{
-    text-align:center;
-
-    background:#ffffff;
-
-    border:1px solid #dce5ea;
-
-    border-radius:10px;
-
     padding:23px 15px;
+    background:#ffffff;
+    border:1px solid #d9e7eb;
+    border-radius:10px;
+    text-align:center;
 }
 
 .step-number{
     width:38px;
     height:38px;
-
     margin:0 auto 11px;
 
-    background:#0b6da7;
-
-    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     border-radius:50%;
 
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
+    background:#087d96;
+    color:#ffffff;
 
     font-weight:800;
 }
 
 .process-card h4{
-    color:#173f5a;
-
+    color:#174e6c;
     font-size:14px;
-
     margin-bottom:6px;
 }
 
 .process-card p{
     color:#74828b;
-
     font-size:12px;
-
     line-height:1.55;
 }
 
 
-/* =========================================================
+/* =====================================================
    APPLICATIONS
-========================================================= */
+===================================================== */
 
 .applications{
     padding:52px 30px;
-
     text-align:center;
 }
 
 .application-list{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    max-width:980px;
-
+    max-width:1000px;
     margin:25px auto 0;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .application-list span{
     padding:10px 16px;
 
-    background:#eef6fa;
-
-    border:1px solid #d5e7ef;
+    background:#eaf5f7;
+    border:1px solid #d2e7eb;
 
     border-radius:22px;
 
-    color:#17425e;
-
+    color:#174d69;
     font-size:12px;
-
     font-weight:700;
 }
 
 
-/* =========================================================
+/* =====================================================
    WHY US
-========================================================= */
+===================================================== */
 
 .why-us{
-    background:#ffffff;
-
     padding:48px 30px;
-
-    border-top:1px solid #e2e8ec;
+    background:#ffffff;
+    border-top:1px solid #e1e9ec;
 }
 
 .why-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
-
     max-width:950px;
-
     margin:25px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .why-card{
     text-align:center;
-
     padding:22px 15px;
 }
 
 .why-icon{
     font-size:29px;
-
     margin-bottom:10px;
 }
 
 .why-card h3{
-    color:#153d58;
-
+    color:#154b69;
     font-size:15px;
-
     margin-bottom:7px;
 }
 
 .why-card p{
     color:#71818a;
-
     font-size:12px;
-
     line-height:1.6;
 }
 
 
-/* =========================================================
+/* =====================================================
    CONTACT
-========================================================= */
+===================================================== */
 
 .contact{
-    background:
-        linear-gradient(
-            135deg,
-            #082e4a,
-            #061d2e
-        );
-
-    color:white;
-
+    padding:50px 20px;
     text-align:center;
 
-    padding:50px 20px;
+    background:
+    linear-gradient(
+        135deg,
+        #07547b,
+        #087f8b
+    );
+
+    color:#ffffff;
 }
 
 .contact h2{
     font-size:30px;
-
     margin-bottom:10px;
 }
 
 .contact p{
-    color:#d3e4ec;
-
+    color:#e0f2f4;
     font-size:14px;
-
-    margin:6px;
+    margin:7px;
 }
 
 .address{
     margin-top:18px;
-
     color:#ffffff;
-
     font-size:15px;
-
     font-weight:800;
 }
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 .footer{
-    background:#041b2b;
-
-    color:#8da4b1;
-
+    padding:20px;
     text-align:center;
 
-    padding:20px;
+    background:#06324c;
+
+    color:#91b1bd;
 
     font-size:11px;
-
     line-height:1.7;
 }
 
 .footer strong{
     color:#ffffff;
-
     font-size:13px;
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media(max-width:950px){
 
     .hero{
         display:block;
-
         text-align:center;
     }
 
@@ -1107,8 +923,7 @@ body{
     }
 
     .service-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
@@ -1118,9 +933,7 @@ body{
 
     .header{
         display:block;
-
         text-align:center;
-
         padding:20px 15px;
     }
 
@@ -1130,7 +943,6 @@ body{
 
     .header-right{
         text-align:center;
-
         margin-top:9px;
     }
 
@@ -1149,7 +961,7 @@ body{
         transform:scale(.80);
 
         margin-top:-5px;
-        margin-bottom:-30px;
+        margin-bottom:-35px;
     }
 
     .service-grid{
@@ -1157,8 +969,7 @@ body{
     }
 
     .process-grid{
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .why-grid{
@@ -1183,9 +994,7 @@ body{
 
     .social{
         min-width:135px;
-
         height:56px;
-
         font-size:13px;
     }
 
@@ -1264,17 +1073,11 @@ body{
         <div class="hero-pills">
 
             <span>🖨️ 3D Printing</span>
-
             <span>🎨 Multi-Color Printing</span>
-
             <span>📡 3D Scanning</span>
-
             <span>🔄 Reverse Engineering</span>
-
             <span>🎭 Miniature Design</span>
-
             <span>🏗️ Building Models</span>
-
             <span>⚙️ Engineering Parts</span>
 
         </div>
@@ -1282,7 +1085,7 @@ body{
     </div>
 
 
-    <!-- GRAND 3D PRINTER -->
+    <!-- 3D PRINTER -->
 
     <div class="printer-display">
 
@@ -1337,31 +1140,108 @@ body{
 
     <div class="social-buttons">
 
-        <a class="social instagram" href="#" target="_blank">
 
-            <span class="social-icon">◎</span>
+        <!-- INSTAGRAM -->
+
+        <a class="social instagram"
+           href="#"
+           target="_blank">
+
+            <svg viewBox="0 0 24 24">
+
+                <rect x="3" y="3"
+                      width="18"
+                      height="18"
+                      rx="5"
+                      ry="5"
+                      fill="none"
+                      stroke="white"
+                      stroke-width="2"/>
+
+                <circle cx="12"
+                        cy="12"
+                        r="4"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"/>
+
+                <circle cx="17.5"
+                        cy="6.5"
+                        r="1.2"
+                        fill="white"/>
+
+            </svg>
 
             <span>Instagram</span>
 
         </a>
 
 
-        <a class="social youtube" href="#" target="_blank">
+        <!-- YOUTUBE -->
 
-            <span class="social-icon">▶</span>
+        <a class="social youtube"
+           href="#"
+           target="_blank">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 1.9 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8Z"
+                fill="white"/>
+
+                <path
+                d="M10 9l5 3-5 3V9Z"
+                fill="#ff0000"/>
+
+            </svg>
 
             <span>YouTube</span>
 
         </a>
 
 
-        <a class="social whatsapp" href="#" target="_blank">
+        <!-- WHATSAPP -->
 
-            <span class="social-icon">◉</span>
+        <a class="social whatsapp"
+           href="#"
+           target="_blank">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.2 21.8l5.2-1.4A9.8 9.8 0 1 0 12 2.2Z"
+                fill="white"/>
+
+                <path
+                d="M16.5 13.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.7.1-.2 0-.4 0-.5-.1-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.8.8-1 2-.2 3.2 1.1 1.8 2.4 3.2 4.4 4.1 2.4 1.1 2.4.7 2.8.7.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3Z"
+                fill="#25d366"/>
+
+            </svg>
 
             <span>WhatsApp</span>
 
         </a>
 
 
+        <!-- FACEBOOK -->
+
         <a class="social facebook"
+           href="#"
+           target="_blank">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3.5l.5-4H13V9c0-.7.3-1 1-1Z"
+                fill="white"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+
+        <!-- CALL -->
+
+        <a cla
