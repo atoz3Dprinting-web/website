@@ -1,13 +1,16 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A to Z 3D Printing & Scan Services | Coimbatore</title>
+<title>A to Z 3D Printing and Scanning Services Coimbatore</title>
 
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 *{
     margin:0;
@@ -15,67 +18,77 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f3f6f9;
-    color:#172b3a;
+html{
+    scroll-behavior:smooth;
 }
 
-/* =========================
-   MAIN WEBSITE
-========================= */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef2f5;
+    color:#172633;
+}
 
-.main-container{
-    max-width:1100px;
+.container{
+    max-width:1180px;
     margin:auto;
     background:#ffffff;
     min-height:100vh;
+    box-shadow:0 0 35px rgba(0,0,0,.08);
 }
 
-/* =========================
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 .header{
     background:#ffffff;
-    padding:25px 30px;
+    padding:24px 32px;
+    border-bottom:1px solid #dce4e9;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #dce5ec;
 }
 
-.logo-area h1{
-    color:#0b3558;
-    font-size:24px;
+.company-name{
+    color:#082c47;
+    font-size:25px;
     font-weight:800;
+    line-height:1.25;
+}
+
+.company-subtitle{
+    color:#1478b5;
+    font-size:13px;
+    font-weight:600;
+    margin-top:6px;
     letter-spacing:.3px;
 }
 
-.logo-area p{
-    color:#2879b7;
-    font-size:13px;
-    margin-top:4px;
-    font-weight:600;
-}
-
-.header-tag{
-    color:#647787;
-    font-size:13px;
+.header-right{
     text-align:right;
+    color:#637681;
+    font-size:12px;
+    line-height:1.6;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+.header-right strong{
+    color:#0b6090;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
-    background:linear-gradient(135deg,#062d4d,#0a527f);
+    background:
+        radial-gradient(circle at 85% 50%,rgba(35,151,211,.18),transparent 30%),
+        linear-gradient(135deg,#061923,#0a3048 55%,#061923);
     color:white;
-    padding:55px 35px;
+    padding:58px 35px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
     gap:35px;
     overflow:hidden;
 }
@@ -84,190 +97,217 @@ body{
     flex:1;
 }
 
-.hero-content .small-title{
-    color:#7ed4ff;
-    font-size:14px;
-    font-weight:bold;
+.hero-label{
+    color:#57c1f0;
+    font-size:13px;
+    font-weight:800;
     letter-spacing:2px;
-    margin-bottom:12px;
+    margin-bottom:13px;
 }
 
-.hero-content h2{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:15px;
+.hero h1{
+    font-size:45px;
+    line-height:1.08;
+    margin-bottom:18px;
 }
 
-.hero-content h2 span{
-    color:#65c8ff;
+.hero h1 span{
+    color:#55c5f5;
 }
 
-.hero-content p{
-    color:#dceefa;
-    font-size:16px;
-    line-height:1.7;
-    max-width:560px;
+.hero-description{
+    max-width:650px;
+    color:#d8e8f0;
+    font-size:15px;
+    line-height:1.75;
 }
 
-.hero-services{
-    margin-top:22px;
+.hero-description strong{
+    color:#ffffff;
+}
+
+.hero-pills{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
+    margin-top:22px;
 }
 
-.hero-services span{
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.22);
+.hero-pills span{
     padding:8px 12px;
     border-radius:20px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.18);
+    color:#eaf8ff;
     font-size:12px;
 }
 
-/* =========================
+
+/* =====================================================
    3D PRINTER ANIMATION
-========================= */
+===================================================== */
 
 .printer-area{
-    width:400px;
-    min-width:350px;
-    height:310px;
+    width:490px;
+    min-width:490px;
+    height:350px;
     position:relative;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 }
 
 .printer{
-    width:280px;
-    height:225px;
-    border:7px solid #dcebf5;
-    border-radius:12px;
+    width:355px;
+    height:285px;
     position:relative;
-    background:linear-gradient(
-        145deg,
-        #ffffff,
-        #d9e8f2
-    );
+    background:linear-gradient(145deg,#10161b,#252d33);
+    border:7px solid #050708;
+    border-radius:15px;
     box-shadow:
-        0 20px 50px rgba(0,0,0,.35);
+        0 25px 55px rgba(0,0,0,.48),
+        inset 0 0 25px rgba(255,255,255,.04);
 }
 
-/* Printer top rail */
+/* top rail */
 
 .rail{
     position:absolute;
-    top:25px;
-    left:28px;
-    right:28px;
+    top:23px;
+    left:32px;
+    right:32px;
     height:8px;
-    background:#0d6da7;
+    background:#59646c;
     border-radius:5px;
 }
 
-/* Moving print head */
+/* glass */
+
+.glass{
+    position:absolute;
+    top:39px;
+    left:27px;
+    right:27px;
+    bottom:48px;
+    border:2px solid #3b4851;
+    border-radius:5px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(120,160,180,.10),
+            rgba(0,0,0,.28)
+        );
+}
+
+/* print head */
 
 .print-head{
     position:absolute;
     top:28px;
-    left:105px;
-    width:55px;
-    height:58px;
-    animation:headMove 3s infinite ease-in-out;
+    left:145px;
+    width:58px;
+    height:73px;
+    z-index:5;
+    animation:headMove 3.2s infinite ease-in-out;
 }
 
 .head-body{
-    width:55px;
-    height:35px;
-    background:#163b55;
+    width:58px;
+    height:39px;
+    background:#080a0c;
+    border:2px solid #4b565e;
     border-radius:5px;
 }
 
 .nozzle{
-    width:15px;
-    height:28px;
-    background:#263f50;
+    width:17px;
+    height:31px;
     margin:auto;
+    background:#626c72;
     position:relative;
 }
 
 .nozzle-tip{
     position:absolute;
-    bottom:-6px;
+    width:8px;
+    height:8px;
     left:4px;
-    width:7px;
-    height:7px;
-    background:#4dc4ff;
+    bottom:-6px;
     border-radius:50%;
+    background:#23b4ee;
+    box-shadow:0 0 13px #23b4ee;
 }
 
-/* Printed object */
+/* printed component */
 
-.object{
+.print-object{
     position:absolute;
-    bottom:48px;
-    left:78px;
-    width:120px;
-    height:80px;
-    border:4px solid #168bd0;
+    left:93px;
+    bottom:53px;
+    width:150px;
+    height:105px;
+    border:3px solid #050708;
+    border-radius:3px;
     background:
         repeating-linear-gradient(
             0deg,
-            #bfeaff 0px,
-            #bfeaff 6px,
-            #8fd4f2 7px,
-            #8fd4f2 10px
+            #151b1f 0px,
+            #151b1f 7px,
+            #252d32 8px,
+            #252d32 11px
         );
-    animation:objectPrint 3s infinite ease-in-out;
     transform-origin:bottom;
+    animation:objectBuild 3.2s infinite ease-in-out;
 }
 
-/* Print bed */
+/* print bed */
 
-.bed{
+.print-bed{
     position:absolute;
-    bottom:28px;
-    left:35px;
-    right:35px;
+    left:38px;
+    right:38px;
+    bottom:32px;
     height:10px;
-    background:#1d506f;
-    border-radius:4px;
+    border-radius:5px;
+    background:#515d64;
 }
 
-/* Light */
+/* status light */
 
 .status-light{
     position:absolute;
-    top:12px;
-    right:15px;
+    right:13px;
+    top:11px;
     width:9px;
     height:9px;
-    background:#35d68a;
     border-radius:50%;
-    box-shadow:0 0 12px #35d68a;
+    background:#32c4f2;
+    box-shadow:0 0 13px #32c4f2;
 }
-
-/* Animation */
 
 @keyframes headMove{
 
     0%,100%{
-        transform:translateX(-55px);
+        transform:translateX(-70px);
     }
 
     50%{
-        transform:translateX(55px);
+        transform:translateX(70px);
     }
 }
 
-@keyframes objectPrint{
+@keyframes objectBuild{
 
     0%{
-        transform:scaleY(.15);
+        transform:scaleY(.12);
     }
 
-    50%{
-        transform:scaleY(.60);
+    45%{
+        transform:scaleY(.55);
+    }
+
+    75%{
+        transform:scaleY(.82);
     }
 
     100%{
@@ -275,62 +315,97 @@ body{
     }
 }
 
-/* Floating labels */
 
-.animation-label{
-    position:absolute;
-    background:white;
-    color:#16415f;
-    padding:9px 13px;
+/* =====================================================
+   SOCIAL MEDIA
+===================================================== */
+
+.social-section{
+    background:#ffffff;
+    padding:22px 25px;
+    border-bottom:1px solid #dfe7ec;
+    text-align:center;
+}
+
+.social-title{
+    color:#092f4b;
+    font-size:14px;
+    font-weight:800;
+    margin-bottom:13px;
+}
+
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.social-buttons a{
+    text-decoration:none;
+    color:#17384e;
+    background:#ffffff;
+    border:1px solid #d4e0e7;
+    padding:10px 15px;
     border-radius:7px;
-    font-size:11px;
-    font-weight:bold;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:13px;
+    font-weight:700;
+    transition:.25s;
 }
 
-.label-print{
-    top:20px;
-    left:0;
+.social-buttons a:hover{
+    background:#edf7fc;
+    border-color:#56a9d5;
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(0,0,0,.09);
 }
 
-.label-scan{
-    right:0;
-    top:90px;
+.social-icon{
+    font-size:17px;
 }
 
-.label-engineering{
-    bottom:20px;
-    left:15px;
-}
 
-/* =========================
-   SERVICES INTRO
-========================= */
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro{
     text-align:center;
-    padding:50px 25px 25px;
+    padding:48px 25px 28px;
 }
 
 .intro h2{
-    color:#0b3558;
+    color:#092f4b;
     font-size:29px;
     margin-bottom:10px;
 }
 
-.intro p{
-    max-width:720px;
-    margin:auto;
-    color:#647787;
-    font-size:15px;
+.intro-line{
+    width:55px;
+    height:3px;
+    background:#1684bd;
+    margin:0 auto 14px;
+    border-radius:5px;
 }
 
-/* =========================
-   SERVICE CARDS
-========================= */
+.intro p{
+    max-width:760px;
+    margin:auto;
+    color:#687983;
+    font-size:14px;
+    line-height:1.75;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .services{
-    padding:25px 30px 55px;
+    padding:25px 32px 58px;
 }
 
 .service-grid{
@@ -341,57 +416,76 @@ body{
 
 .service-card{
     background:#ffffff;
-    border:1px solid #dce6ed;
-    border-radius:10px;
-    padding:24px 20px;
+    border:1px solid #dce5ea;
+    border-radius:11px;
+    padding:23px 20px;
     transition:.25s;
-    box-shadow:0 4px 14px rgba(20,50,70,.05);
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#1684bd;
 }
 
 .service-card:hover{
     transform:translateY(-5px);
-    border-color:#65b8e8;
-    box-shadow:0 12px 25px rgba(20,50,70,.10);
+    border-color:#65b3dc;
+    box-shadow:0 12px 28px rgba(20,55,75,.10);
 }
 
 .service-icon{
-    width:45px;
-    height:45px;
+    width:46px;
+    height:46px;
     border-radius:9px;
-    background:#e8f5fc;
+    background:#eaf6fc;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
-    margin-bottom:15px;
+    font-size:21px;
+    margin-bottom:14px;
 }
 
 .service-card h3{
-    color:#123d5e;
+    color:#123d59;
     font-size:17px;
     margin-bottom:8px;
 }
 
 .service-card p{
-    color:#667988;
+    color:#697a84;
     font-size:13px;
-    line-height:1.6;
+    line-height:1.65;
 }
 
-/* =========================
+
+/* =====================================================
    PROCESS
-========================= */
+===================================================== */
 
 .process{
-    background:#f5f8fb;
-    padding:50px 30px;
+    background:#f4f7f9;
+    padding:50px 32px;
 }
 
-.process-title{
+.section-heading{
     text-align:center;
-    color:#0b3558;
-    font-size:27px;
-    margin-bottom:30px;
+    color:#092f4b;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#71818a;
+    font-size:13px;
+    margin-bottom:28px;
 }
 
 .process-grid{
@@ -400,51 +494,47 @@ body{
     gap:15px;
 }
 
-.process-step{
+.process-card{
     text-align:center;
-    background:white;
-    padding:22px 15px;
-    border-radius:9px;
-    border:1px solid #dde7ed;
+    background:#ffffff;
+    border:1px solid #dce5ea;
+    border-radius:10px;
+    padding:23px 15px;
 }
 
 .step-number{
-    width:35px;
-    height:35px;
-    margin:0 auto 10px;
-    border-radius:50%;
+    width:37px;
+    height:37px;
+    margin:0 auto 11px;
     background:#0b6da7;
     color:white;
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-weight:bold;
+    font-weight:800;
 }
 
-.process-step h4{
-    color:#174565;
+.process-card h4{
+    color:#173f5a;
     font-size:14px;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
-.process-step p{
-    color:#71818d;
+.process-card p{
+    color:#74828b;
     font-size:12px;
+    line-height:1.55;
 }
 
-/* =========================
+
+/* =====================================================
    APPLICATIONS
-========================= */
+===================================================== */
 
 .applications{
-    padding:50px 30px;
+    padding:52px 30px;
     text-align:center;
-}
-
-.applications h2{
-    color:#0b3558;
-    font-size:27px;
-    margin-bottom:22px;
 }
 
 .application-list{
@@ -452,132 +542,172 @@ body{
     justify-content:center;
     flex-wrap:wrap;
     gap:10px;
+    max-width:950px;
+    margin:25px auto 0;
 }
 
 .application-list span{
-    background:#eef6fb;
-    color:#174565;
     padding:10px 16px;
-    border-radius:25px;
-    border:1px solid #d6e8f3;
-    font-size:13px;
-    font-weight:600;
+    background:#eef6fa;
+    border:1px solid #d5e7ef;
+    border-radius:22px;
+    color:#17425e;
+    font-size:12px;
+    font-weight:700;
 }
 
-/* =========================
+
+/* =====================================================
+   WHY US
+===================================================== */
+
+.why-us{
+    background:#ffffff;
+    padding:45px 30px;
+    border-top:1px solid #e2e8ec;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    max-width:950px;
+    margin:25px auto 0;
+}
+
+.why-card{
+    text-align:center;
+    padding:22px 15px;
+}
+
+.why-card .why-icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.why-card h3{
+    color:#153d58;
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.why-card p{
+    color:#71818a;
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact{
-    background:#082f4e;
+    background:
+        linear-gradient(135deg,#082e4a,#061f31);
     color:white;
     text-align:center;
-    padding:45px 25px;
+    padding:48px 20px;
 }
 
 .contact h2{
-    font-size:27px;
+    font-size:29px;
     margin-bottom:10px;
 }
 
 .contact p{
-    color:#d4e6f1;
+    color:#d3e4ec;
     font-size:14px;
-    margin:6px 0;
+    margin:6px;
 }
 
-.contact .address{
+.address{
     margin-top:18px;
+    color:#ffffff;
     font-size:15px;
-    color:white;
-    font-weight:bold;
+    font-weight:800;
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer{
-    background:#051f34;
-    color:#91aabb;
+    background:#041b2b;
+    color:#8da4b1;
     text-align:center;
-    padding:18px;
+    padding:20px;
     font-size:11px;
+    line-height:1.7;
 }
 
 .footer strong{
-    color:white;
+    color:#ffffff;
+    font-size:13px;
 }
 
-/* =========================
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
-@media(max-width:850px){
-
-    .header{
-        display:block;
-        text-align:center;
-    }
-
-    .header-tag{
-        text-align:center;
-        margin-top:8px;
-    }
+@media(max-width:950px){
 
     .hero{
         display:block;
         text-align:center;
     }
 
-    .hero-content h2{
-        font-size:32px;
-    }
-
-    .hero-content p{
+    .hero-description{
         margin:auto;
     }
 
-    .hero-services{
+    .hero-pills{
         justify-content:center;
     }
 
     .printer-area{
-        margin:30px auto 0;
-        width:100%;
-        max-width:400px;
+        margin:25px auto 0;
     }
 
     .service-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .process-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
 
-@media(max-width:550px){
+@media(max-width:650px){
 
     .header{
+        display:block;
+        text-align:center;
         padding:20px 15px;
     }
 
-    .logo-area h1{
+    .company-name{
         font-size:20px;
     }
 
-    .hero{
-        padding:40px 18px;
+    .header-right{
+        text-align:center;
+        margin-top:9px;
     }
 
-    .hero-content h2{
-        font-size:29px;
+    .hero{
+        padding:42px 18px;
+    }
+
+    .hero h1{
+        font-size:31px;
     }
 
     .printer-area{
-        transform:scale(.85);
-        margin-top:10px;
+        width:100%;
+        min-width:0;
+        transform:scale(.82);
+        margin-top:-5px;
+        margin-bottom:-25px;
     }
 
     .service-grid{
@@ -585,14 +715,31 @@ body{
     }
 
     .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
         grid-template-columns:1fr;
     }
 
     .services,
     .process,
-    .applications{
+    .why-us{
         padding-left:18px;
         padding-right:18px;
+    }
+
+}
+
+@media(max-width:420px){
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .social-buttons a{
+        padding:9px 11px;
+        font-size:12px;
     }
 
 }
@@ -603,71 +750,85 @@ body{
 
 <body>
 
-<div class="main-container">
+<div class="container">
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header class="header">
 
-    <div class="logo-area">
+    <div>
 
-        <h1>
-            A to Z 3D PRINTING & SCAN SERVICES
-        </h1>
+        <div class="company-name">
+            A to Z 3D Printing and Scanning Services Coimbatore
+        </div>
 
-        <p>
-            Coimbatore • Engineering • Manufacturing
-        </p>
+        <div class="company-subtitle">
+            Professional 3D Printing • 3D Scanning • Engineering Solutions
+        </div>
 
     </div>
 
-    <div class="header-tag">
-        Professional 3D Solutions
+    <div class="header-right">
+
+        <strong>From Concept to Component</strong>
+
         <br>
-        From Concept to Component
+
+        3D Manufacturing & Engineering
+
     </div>
 
 </header>
 
 
-<!-- =========================
-     HERO + 3D PRINTER
-========================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-        <div class="small-title">
-            ADVANCED 3D MANUFACTURING
+        <div class="hero-label">
+            3D MANUFACTURING & ENGINEERING
         </div>
 
-        <h2>
-            From <span>Digital Design</span><br>
-            to Real Component
-        </h2>
+        <h1>
+            Turn Your <span>Ideas</span><br>
+            Into Reality
+        </h1>
 
-        <p>
-            Professional 3D Printing, 3D Scanning,
-            Reverse Engineering, Prototype Development
-            and Custom Engineering Solutions.
+        <p class="hero-description">
+
+            Professional solutions for
+
+            <strong>
+            3D Printing, Multi-Color Printing,
+            3D Scanning, Reverse Engineering,
+            Miniature Design, Building & Architectural Models,
+            Prototype Development and Engineering Components.
+            </strong>
+
         </p>
 
-        <div class="hero-services">
+        <div class="hero-pills">
 
             <span>🖨️ 3D Printing</span>
+
+            <span>🎨 Multi-Color Printing</span>
 
             <span>📡 3D Scanning</span>
 
             <span>🔄 Reverse Engineering</span>
 
-            <span>📐 CAD Design</span>
+            <span>🎭 Miniature Design</span>
+
+            <span>🏗️ Building Models</span>
 
             <span>⚙️ Engineering Parts</span>
-
-            <span>🏭 Small Batch Production</span>
 
         </div>
 
@@ -678,24 +839,13 @@ body{
 
     <div class="printer-area">
 
-        <div class="animation-label label-print">
-            🖨️ 3D PRINTING
-        </div>
-
-        <div class="animation-label label-scan">
-            📡 3D SCANNING
-        </div>
-
-        <div class="animation-label label-engineering">
-            ⚙️ ENGINEERING
-        </div>
-
-
         <div class="printer">
 
             <div class="status-light"></div>
 
             <div class="rail"></div>
+
+            <div class="glass"></div>
 
             <div class="print-head">
 
@@ -709,9 +859,9 @@ body{
 
             </div>
 
-            <div class="object"></div>
+            <div class="print-object"></div>
 
-            <div class="bed"></div>
+            <div class="print-bed"></div>
 
         </div>
 
@@ -720,9 +870,56 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     SOCIAL MEDIA
+===================================================== -->
+
+<section class="social-section">
+
+    <div class="social-title">
+        CONNECT WITH US
+    </div>
+
+    <div class="social-buttons">
+
+        <a href="#" target="_blank">
+            <span class="social-icon">📷</span>
+            Instagram
+        </a>
+
+        <a href="#" target="_blank">
+            <span class="social-icon">▶</span>
+            YouTube
+        </a>
+
+        <a href="#" target="_blank">
+            <span class="social-icon">💬</span>
+            WhatsApp
+        </a>
+
+        <a href="#" target="_blank">
+            <span class="social-icon">f</span>
+            Facebook
+        </a>
+
+        <a href="tel:+91XXXXXXXXXX">
+            <span class="social-icon">☎</span>
+            Call
+        </a>
+
+        <a href="mailto:atozonlineservicescbe@gmail.com">
+            <span class="social-icon">✉</span>
+            Email
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      INTRO
-========================= -->
+===================================================== -->
 
 <section class="intro">
 
@@ -730,371 +927,290 @@ body{
         What We Do
     </h2>
 
+    <div class="intro-line"></div>
+
     <p>
-        We provide practical 3D manufacturing and engineering
-        solutions for industries, businesses, educational institutions,
-        product developers and individual requirements.
+
+        We provide professional digital manufacturing,
+        3D scanning and engineering solutions for
+        industries, product developers, businesses,
+        educational institutions and custom requirements.
+
     </p>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
 <section class="services">
 
-    <div class="service-grid">
+<div class="service-grid">
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🖨️</div>
+<div class="service-icon">🖨️</div>
 
-            <h3>3D Printing</h3>
+<h3>3D Printing</h3>
 
-            <p>
-                High-quality 3D printed prototypes,
-                functional components, custom parts
-                and production-ready models.
-            </p>
+<p>
+Professional 3D printed prototypes,
+functional components, custom parts
+and production-ready models.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">📡</div>
+<div class="service-icon">🎨</div>
 
-            <h3>3D Scanning</h3>
+<h3>Multi-Color 3D Printing</h3>
 
-            <p>
-                Capture physical objects and components
-                and convert them into accurate digital
-                3D models.
-            </p>
+<p>
+Multi-color printed models for
+presentation, product development,
+branding and visual applications.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🔄</div>
+<div class="service-icon">📡</div>
 
-            <h3>Reverse Engineering</h3>
+<h3>3D Scanning</h3>
 
-            <p>
-                Recreate existing components into
-                usable CAD models for replacement,
-                modification and redesign.
-            </p>
+<p>
+Convert physical objects and components
+into accurate digital 3D models for
+design and engineering applications.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">📐</div>
+<div class="service-icon">🔄</div>
 
-            <h3>CAD & Component Design</h3>
+<h3>Reverse Engineering</h3>
 
-            <p>
-                Custom engineering design and
-                development based on drawings,
-                dimensions, samples or concepts.
-            </p>
+<p>
+Recreate existing components into
+usable CAD models for replacement,
+modification and redesign.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">⚙️</div>
+<div class="service-icon">📐</div>
 
-            <h3>Engineering Components</h3>
+<h3>CAD & Component Design</h3>
 
-            <p>
-                Custom-made engineering parts,
-                machine components, enclosures,
-                brackets and functional parts.
-            </p>
+<p>
+Custom engineering designs based on
+drawings, dimensions, physical samples
+or customer concepts.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🏭</div>
+<div class="service-icon">⚙️</div>
 
-            <h3>Small Batch Production</h3>
+<h3>Engineering Components</h3>
 
-            <p>
-                Low-volume manufacturing without
-                expensive tooling or mould investment.
-            </p>
+<p>
+Custom machine parts, brackets,
+fixtures, enclosures and functional
+engineering components.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🧩</div>
+<div class="service-icon">🚀</div>
 
-            <h3>Rapid Prototyping</h3>
+<h3>Rapid Prototyping</h3>
 
-            <p>
-                Quickly transform your product idea
-                into a physical prototype for testing
-                and development.
-            </p>
+<p>
+Quickly transform product ideas
+into physical prototypes for
+testing and development.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🏗️</div>
+<div class="service-icon">🏭</div>
 
-            <h3>Product Development</h3>
+<h3>Small Batch Production</h3>
 
-            <p>
-                Support from initial concept and
-                design through prototype development
-                and physical production.
-            </p>
+<p>
+Low-volume production without
+expensive moulds or tooling
+investment.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🎓</div>
+<div class="service-icon">🎭</div>
 
-            <h3>College & School Projects</h3>
+<h3>Miniature Design</h3>
 
-            <p>
-                3D printed models and engineering
-                components for academic and
-                technical projects.
-            </p>
+<p>
+Detailed miniature models,
+scale models and custom designs
+for personal and professional use.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">🎁</div>
+<div class="service-icon">🏗️</div>
 
-            <h3>Custom Models & Gifts</h3>
+<h3>Building & Architectural Models</h3>
 
-            <p>
-                Custom 3D printed models, miniatures,
-                personalised products and corporate
-                requirements.
-            </p>
+<p>
+3D printed building models,
+architectural miniatures and
+project presentation models.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">📦</div>
+<div class="service-icon">🧩</div>
 
-            <h3>Spare Parts</h3>
+<h3>Spare Parts</h3>
 
-            <p>
-                Replacement parts and discontinued
-                components can be recreated using
-                scanning, CAD and 3D printing.
-            </p>
+<p>
+Recreate unavailable, damaged or
+discontinued parts using scanning,
+CAD design and 3D printing.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="service-card">
 
-            <div class="service-icon">💡</div>
+<div class="service-icon">💡</div>
 
-            <h3>Custom Solutions</h3>
+<h3>Product Development</h3>
 
-            <p>
-                Practical solutions for unique
-                engineering, manufacturing and
-                product development requirements.
-            </p>
+<p>
+Support from concept and design
+through prototype development
+and physical production.
+</p>
 
-        </div>
+</div>
 
 
-    </div>
+<div class="service-card">
+
+<div class="service-icon">🎓</div>
+
+<h3>College & School Projects</h3>
+
+<p>
+3D printed models and engineering
+components for academic, science
+and technical projects.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🎁</div>
+
+<h3>Custom Models & Gifts</h3>
+
+<p>
+Personalised models, creative products,
+corporate gifts and custom
+3D printed items.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🏢</div>
+
+<h3>Industrial Solutions</h3>
+
+<p>
+Practical 3D manufacturing solutions
+for industries, workshops and
+engineering requirements.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      WORK PROCESS
-========================= -->
+===================================================== -->
 
 <section class="process">
 
-    <div class="process-title">
-        Our Work Process
-    </div>
+    <h2 class="section-heading">
+        From Idea to Final Component
+    </h2>
+
+    <p class="section-subtitle">
+        A simple and professional workflow for your project
+    </p>
 
     <div class="process-grid">
 
 
-        <div class="process-step">
+        <div class="process-card">
 
             <div class="step-number">1</div>
 
             <h4>Idea / Sample</h4>
 
             <p>
-                Share your idea,
-                drawing or physical component.
+                Share your idea, drawing,
+                dimensions or physical component.
             </p>
 
         </div>
 
 
-        <div class="process-step">
+        <div class="process-card">
 
-            <div class="step-number">2</div>
-
-            <h4>Design / Scan</h4>
-
-            <p>
-                Create or capture
-                the required 3D model.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="step-number">3</div>
-
-            <h4>Prototype / Print</h4>
-
-            <p>
-                Manufacture the component
-                using advanced 3D printing.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="step-number">4</div>
-
-            <h4>Final Component</h4>
-
-            <p>
-                Deliver an accurate,
-                usable physical component.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     APPLICATIONS
-========================= -->
-
-<section class="applications">
-
-    <h2>
-        Applications
-    </h2>
-
-    <div class="application-list">
-
-        <span>Engineering Industries</span>
-
-        <span>Manufacturing</span>
-
-        <span>Injection Moulding</span>
-
-        <span>Product Development</span>
-
-        <span>Automotive</span>
-
-        <span>Education</span>
-
-        <span>R&D</span>
-
-        <span>Prototyping</span>
-
-        <span>Custom Manufacturing</span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact">
-
-    <h2>
-        Let's Build Your Idea
-    </h2>
-
-    <p>
-        Have a component, prototype or engineering requirement?
-    </p>
-
-    <p>
-        Contact us for professional 3D printing and engineering solutions.
-    </p>
-
-    <div class="address">
-        📍 Nallapalayam, Ganapathy, Coimbatore - 641006
-    </div>
-
-    <p>
-        ✉️ atozonlineservicescbe@gmail.com
-    </p>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="footer">
-
-    <strong>
-        A to Z 3D Printing & Scan Services
-    </strong>
-
-    <br>
-
-    3D Printing • 3D Scanning • Reverse Engineering •
-    Prototype Development • Engineering Solutions
-
-    <br><br>
-
-    © 2026 A to Z 3D Printing & Scan Services. All Rights Reserved.
-
-</footer>
-
-
-</div>
-
-</body>
-</html>
-```
-    
+            <div class="
